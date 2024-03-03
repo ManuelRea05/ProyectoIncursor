@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.txtcolor{
+    color: #BFD8AF;
+}
+
+
+/* Estilo del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo del logo en el encabezado */
+header img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70px; 
+}
+
+/* Estilo de la barra de navegación */
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilo de la sección de inicio */
+.inicio {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+}
+
+.inicio .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.inicio h2 {
+    color: #333;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.inicio p {
+    color: #666;
+    font-size: 16px;
+    margin: 20px;
+    color: #797e8e;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.ult-ingresos {
+    margin-top: 40px; /* Ajusta la distancia desde la sección anterior */
+    text-align: center;
+}
+
+.ult-ingresos p {
+    color: #007BFF;
+    font-size: 1em;
+    font-weight: bold; 
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 100px;
+}
+
+.inicio div:last-child {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* Estilo del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* Estilo de la sección de contacto en el pie de página */
+footer section {
+    margin-bottom: 20px;
+}
+
+/* Estilo del mapa en el pie de página */
+footer iframe {
+    margin-top: 20px;
+    width: 30%;
+    max-width: 100%;
+    height: 250px; 
+    border: 0;
+}
+
+/* Estilos para la sección de Productos y las tarjetas */
+.productos {
+    text-align: center;
+    padding: 20px;
+}
+
+.productos h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tarjeta {
+    margin: 10px;
+    flex: 1 0 200px;  
+
+        .imgTarjeta{
+            width: 100%; 
+            height: 200px;  
+            object-fit: contain;
+        }
+}
+
+.tarjeta a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para la sección Nosotros */
+.nosotros {
+    text-align: center;
+    padding: 20px;
+}
+
+.nosotros h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.nosotros p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.nosotros iframe {
+    width: 100%;
+    max-width: 800px; /* Ajusta según sea necesario */
+    height: 400px; /* Ajusta según sea necesario */
+}
+
+
+.opcion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.opcion h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.opcion p {
+    color: #666;
+} 
+
+/* Estilos para la sección de Contacto */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+form {
+    display: grid;
+    grid-gap: 15px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+

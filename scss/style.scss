@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap');
+@import 'variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.txtcolor{
+    color: #BFD8AF;
+}
+
+
+/* Estilo del encabezado */
+
+header {
+    background-color: $color-header-bg;
+    color: $color-header-text;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+  
+    .container-left,
+    .container-right {
+        flex: 0 0 auto; 
+    }
+
+    .container-center {
+        flex: 1; 
+        text-align: center; 
+    }
+  
+    nav {
+        ul {
+            list-style: none;
+            display: inline-block; 
+            padding: 0; 
+        }
+
+        li {
+            display: inline;
+            margin-right: 20px;
+    
+            a {
+                text-decoration: none;
+                color: $color-header-text;
+                font-weight: bold;
+    
+                &:hover {
+                    color: lighten($color-primary, 20%);
+                }
+            }
+        }
+    }
+
+    .search-container input[type="text"],
+    .search-container button {
+        margin-right: 5px;
+    }
+  
+    .container-cart-icon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+    }
+
+    .container-cart-icon svg {
+        width: 24px; 
+        height: 24px; 
+        stroke: $color-header-text; 
+        margin-right: 5px; 
+    }
+  
+    .count-products {
+        font-size: 14px; 
+        margin-right: 15px;
+    }
+  
+
+  
+    /* Estilo del logo en el encabezado */
+    header img {
+        max-width: 100%;
+        height: auto;
+        max-height: 70px; 
+    }
+}
+
+  
+  
+  /* Estilo del logo en el encabezado */
+  header img {
+    max-width: 100%;
+    height: auto;
+    max-height: 70px; 
+  }
+  
+
+/* Estilo de la sección de inicio */
+.inicio {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff;
+  }
+  
+  .inicio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .inicio h2 {
+    color: $color-text;
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  
+  .inicio p {
+    color: $color-text-light;
+    font-size: 16px;
+    margin: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+.ult-ingresos {
+    margin-top: 40px; 
+    text-align: center;
+}
+
+.ult-ingresos p {
+    color: $color-primary;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 100px;
+  }
+  
+  .inicio div:last-child {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+
+/* Estilo del pie de página */
+footer {
+    background-color: $color-footer-bg;
+    color: $color-footer-text;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer a {
+    color: $color-footer-text;
+    margin: 0 10px;
+}
+
+/* Estilo de la sección de contacto en el pie de página */
+footer section {
+    margin-bottom: 20px;
+}
+
+/* Estilo del mapa en el pie de página */
+footer iframe {
+    margin-top: 20px;
+    width: 30%;
+    max-width: 100%;
+    height: 200px;
+    border: 0;
+  }
+
+/* Estilos para la sección de Productos y las tarjetas */
+.productos {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .productos h2 {
+    color: $color-text;
+    margin-bottom: 20px;
+  }
+  
+  .tarjeta {
+    margin: 10px;
+    flex: 1 0 200px;
+  }
+  .tarjeta .imgTarjeta {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .tarjeta a {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  // Estilos para la sección Nosotros
+  .nosotros {
+    text-align: center;
+    padding: 20px;
+  
+    h2 {
+      color: $color-text;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      color: $color-text-light;
+      margin-bottom: 20px;
+    }
+  
+    iframe {
+      width: 100%;
+      max-width: 800px; 
+      height: 400px; 
+    }
+  }
+  
+  .opcion {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    margin: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px $color-shadow;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .opcion h3 {
+    margin-top: 10px;
+    color: $color-text;
+  }
+  
+  .opcion p {
+    color: $color-text-light;
+  }
+
+
+/* Estilos para la sección de Contacto */
+main {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  section h1 {
+    color: $color-text;
+    margin-bottom: 20px;
+  }
+  
+  section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: grid;
+    grid-gap: 15px;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  }
+  
+  form button {
+    background-color: $button-bg;
+    color: $button-text;
+    padding: 10px 20px;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* Estilos para el nav en dispositivos móviles */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px 0; 
+        
+        .logo-container,
+        .search-container,
+        .container-cart-icon {
+            margin-top: 10px; 
+        }
+    }
+
+    nav {
+        ul {
+            flex-direction: column; 
+            align-items: center; 
+            padding: 0;
+            
+            li {
+                margin: 10px 0; 
+            }
+        }
+    }
+
+    .container-cart-icon {
+        align-self: flex-end; 
+    }
+}
+
+
+.tarjeta {
+     width: 100%; 
+    margin-bottom: 20px; 
+ }
+
+
+
+
+
+
+
+
+
+

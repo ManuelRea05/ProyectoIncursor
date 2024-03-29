@@ -8,132 +8,155 @@
 }
 
 .txtcolor{
-    color: #BFD8AF;
+    color: #71cd38;
 }
 
 
 /* Estilo del encabezado */
 
 header {
-    background-color: $color-header-bg;
-    color: $color-header-text;
-    padding: 10px 10px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-  
-    .container-left,
-    .container-right {
-        flex: 0 0 auto; 
-    }
+  background-color: $color-header-bg;
+  color: $color-header-text;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
 
-    .container-center {
-        flex: 1; 
-        text-align: center; 
-    }
-  
-    nav {
-      max-width: 800px; 
-      margin: 0 auto; 
-        ul {
-            list-style: none;
-            display: inline-block; 
-            padding: 0; 
-        }
+  .container-left,
+  .container-right {
+      flex: 0 0 auto; 
+  }
 
-        li {
-            display: inline;
-            margin-right: 20px;
-    
-            a {
-                text-decoration: none;
-                color: $color-header-text;
-                font-weight: bold;
-    
-                &:hover {
-                    color: lighten($color-primary, 20%);
-                }
-            }
-        }
-    }
+  .container-center {
+      flex: 1; 
+      text-align: center; 
+  }
 
-    .search-container input[type="text"],
-    .search-container button {
-        margin-right: 5px;
-    }
-  
-    .container-cart-icon {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end; 
-    }
+  nav {
+      ul {
+          position: relative;
+          list-style: none;
+          display: block; 
+          padding: 0; 
+          
+          li {
+              display: inline;
+              margin-right: 20px;
+      
+              a {
+                  text-decoration: none;
+                  color: $color-header-text;
+                  font-weight: bold;
+      
+                  &:hover {
+                      color: lighten($color-primary, 20%);
+                  }
+              }
+          }
+      }
+  }
 
-    .container-cart-icon svg {
-        width: 24px; 
-        height: 24px; 
-        stroke: $color-header-text; 
-        margin-right: 5px; 
-    }
-  
-    .count-products {
-        font-size: 14px; 
-        margin-right: 15px;
-    }
-  
+  .search-container input[type="text"],
+  .search-container button {
+      margin-right: 5px;
+      background-color: #fefefe; /* Color de fondo */
+      color: black; /* Color del texto */
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
 
+  .search-container button:hover {
+    background-color: #71cd38; /* Cambio de color de fondo al pasar el cursor */
+  }
   
-    /* Estilo del logo en el encabezado */
-    header img {
-        max-width: 100%;
-        height: auto;
-        max-height: 70px; 
-    }
+  .search-container button:focus {
+    outline: none; 
+  }
+
+  .container-cart-icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; 
+  }
+
+  .container-cart-icon svg {
+      width: 24px; 
+      height: 24px; 
+      stroke: $color-header-text; 
+      margin-right: 5px; 
+  }
+
+  .count-products {
+      font-size: 14px; 
+      margin-right: 15px;
+  }
+  
 }
 
-  
-  
-  /* Estilo del logo en el encabezado */
-  header img {
-    max-width: 100%;
-    height: auto;
-    max-height: 70px; 
-  }
+/* Estilo del logo en el encabezado */
+header img {
+  max-width: 100%;
+  height: auto;
+  max-height: 70px; 
+}
+
   
 
 /* Estilo de la sección de inicio */
 .inicio {
+  background-image: url('../assets/img/pexels-cottonbro-studio-5082579.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+
+  .contenido-seccion {
     text-align: center;
-    padding: 50px;
-    background-color: #fff;
-    
-  }
-  
-  .inicio .contenido-seccion {
-    max-width: 1100px;
-    margin: auto;
-  }
-  
-  .inicio h2 {
-    color: $color-text;
-    font-size: 3rem;
-    letter-spacing: 3px;
-  }
-  
-  .inicio p {
-    color: $color-text-light;
-    font-size: 16px;
-    margin: 20px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+
+    .info {
+      background-color: rgba(255, 255, 255, 0.8); // Fondo semitransparente para el texto
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); // Sombra para resaltar el texto
+
+      h2 {
+        color: #333;
+        font-size: 3rem;
+        letter-spacing: 3px;
+      }
+
+      p {
+        color: #666;
+        font-size: 16px;
+        margin: 20px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+    }
   }
 
-
-
-.ult-ingresos {
-    margin-top: 40px; 
-    text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px); // Efecto de desenfoque en la imagen de fondo
+    z-index: -1;
+  }
 }
+  .ult-ingresos {
+    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+    text-align: center;
+  }
 
 .ult-ingresos p {
     color: $color-primary;
@@ -149,27 +172,11 @@ header {
     text-align: center;
   }
 
-  @mixin seccion-destacada {
-    background-color: $color-fondo;
-    padding: 50px;
+  #carouselExampleControls {
+    max-width: 600px; /* Ajusta el ancho según sea necesario */
+    margin: auto;
   }
-  
-  .nosotros {
-    @include seccion-destacada;
-    text-align: center;
-  }
-  
-  .nosotros h2 {
-    color: $color-primary;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .nosotros p {
-    font-size: 1.25rem;
-    color: $color-texto;
-    margin-bottom: 20px;
-  }
+
 
 
 /* Estilo del pie de página */
@@ -210,6 +217,12 @@ footer iframe {
     margin-bottom: 20px;
   }
   
+  dl, ol, ul {
+    margin-top: 0; // Cambiado de 1rem a 0
+    margin-bottom: 0rem;
+}
+
+
   .tarjeta {
     margin: 10px;
     flex: 1 0 200px;
@@ -227,26 +240,51 @@ footer iframe {
   }
   
   // Estilos para la sección Nosotros
-  .nosotros {
-    text-align: center;
-    padding: 20px;
-  
-    h2 {
-      color: $color-text;
-      margin-bottom: 10px;
-    }
-  
-    p {
-      color: $color-text-light;
-      margin-bottom: 20px;
-    }
-  
-    iframe {
-      width: 100%;
-      max-width: 800px; 
-      height: 400px; 
-    }
-  }
+  .nosotros{
+    max-width: 1100px;
+    margin: auto;
+    height: 100vh;
+    padding: 100px 0px;
+}
+
+.nosotros .fila{
+    display: flex;
+    align-items: center;
+}
+.nosotros .fila .col{
+    width: 50%;
+}
+.nosotros .fila .col img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.nosotros .fila .col .contenedor-titulo{
+    display: flex;
+    align-items: center;
+}
+.nosotros .fila .col .contenedor-titulo .info{
+    color: $color-text-light;
+    margin-left: 30px;
+    margin-bottom: 40px;
+}
+.nosotros .fila .col .contenedor-titulo .info .frase{
+    color: #40F8FF;
+}
+.nosotros .fila .col .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.nosotros .fila .col p{
+    margin-bottom: 10px;
+    line-height: 28px;
+    margin-left: 30px;
+    color: $color-text;
+}
+.nosotros hr{
+    margin-bottom: 30px;
+}
+
   
   .opcion {
     border: 1px solid $border-color;
@@ -270,7 +308,6 @@ footer iframe {
 
 /* Estilos para la sección de Contacto */
 main {
-    text-align: center;
     padding: 20px;
   }
   
@@ -318,13 +355,6 @@ main {
     font-size: 16px;
   }
 
-  /* Estilos adicionales para el carrusel */
-.carousel-item img {
-  height: 300px; 
-  object-fit: cover;
-}
-
-
   /* Estilos para el nav en dispositivos móviles */
 @media screen and (max-width: 767px) {
     header {
@@ -356,12 +386,11 @@ main {
     }
 }
 
+
 .tarjeta {
      width: 100%; 
     margin-bottom: 20px; 
  }
-
-
 
 
 

@@ -11,8 +11,8 @@
     <!-- Boostrap local -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="../ProyectoIncursor/css/style.css">
-
 </head>
+
 <body>
     <header>
         <nav>
@@ -25,7 +25,9 @@
             </ul>
         </nav>
         <div class="logo-container">
-            <img src="./assets/img/logo.png" alt="Incursor">
+            <a href="#">
+                <img src="./assets/img/logo.png" alt="Incursor">
+            </a>
         </div>
         <div class="search-container">
             <input type="text" placeholder="Buscar...">
@@ -52,42 +54,40 @@
         </div>
     </header>
     
-      
-    
     <main>
         <section id="inicio" class="inicio">
-            <div class="fondo">
-                <img src="./assets/img/pexels-cytonn-photography-955405.jpg" alt="">
+            <div class="contenido-seccion">
+                <div class="info">
+                    <h2>SOMOS <span class="txtcolor">INCURSOR</span></h2>
+                    <p>Tu tienda de informática</p>
+                </div>
             </div>
-                <div class="contenido-seccion">
-                    <div class="info">
-                        <h2>SOMOS <span class="txtcolor">INCURSOR</span></h2>
-                        <p>Tu tienda de informática</p>
-                    </div>
-                    <div class="ult-ingresos">
-                        <h3>ÚLTIMOS INGRESOS</h3>
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./assets/img/teclado.jpg" class="d-block w-100" alt="Producto 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./assets/img/teclado.jpg" class="d-block w-100" alt="Producto 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="./assets/img/teclado.jpg" class="d-block w-100" alt="Producto 3">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+        </section>
+        
+        <section id="ult-ingresos" class="ult-ingresos">
+            <div class="contenido-seccion">
+                <h3>ÚLTIMOS INGRESOS</h3>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/teclado.jpg" class="d-block img-fluid" alt="Producto 1">
+                        </div>                        
+                        <div class="carousel-item">
+                            <img src="./assets/img/teclado.jpg" class="d-block w-90 h-90 " alt="Producto 2">
                         </div>
-                    </div>                
+                        <div class="carousel-item">
+                            <img src="./assets/img/teclado.jpg" class="d-block w-100 h-100" alt="Producto 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </div>
         </section>
     </main>

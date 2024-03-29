@@ -189,6 +189,7 @@ footer iframe {
 .productos h2 {
   color: #333;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 dl, ol, ul {
@@ -252,6 +253,7 @@ dl, ol, ul {
 }
 
 .nosotros .fila .col .contenedor-titulo .info h2 {
+  color: #333;
   font-size: 3rem;
 }
 

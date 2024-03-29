@@ -215,10 +215,11 @@ footer iframe {
   .productos h2 {
     color: $color-text;
     margin-bottom: 20px;
+    font-size: 2rem;
   }
   
   dl, ol, ul {
-    margin-top: 0; // Cambiado de 1rem a 0
+    margin-top: 0; 
     margin-bottom: 0rem;
 }
 
@@ -273,6 +274,7 @@ footer iframe {
     color: #40F8FF;
 }
 .nosotros .fila .col .contenedor-titulo .info h2{
+    color: $color-text;
     font-size: 3rem;
 }
 .nosotros .fila .col p{

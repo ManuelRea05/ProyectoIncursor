@@ -11,9 +11,7 @@
     color: #71cd38;
 }
 
-
 /* Estilo del encabezado */
-
 header {
   background-color: $color-header-bg;
   color: $color-header-text;
@@ -60,8 +58,8 @@ header {
   .search-container input[type="text"],
   .search-container button {
       margin-right: 5px;
-      background-color: #fefefe; /* Color de fondo */
-      color: black; /* Color del texto */
+      background-color: #fefefe; 
+      color: black;
       border: none;
       border-radius: 4px;
       cursor: pointer;
@@ -69,7 +67,7 @@ header {
   }
 
   .search-container button:hover {
-    background-color: #71cd38; /* Cambio de color de fondo al pasar el cursor */
+    background-color: #71cd38; 
   }
   
   .search-container button:focus {
@@ -103,8 +101,6 @@ header img {
   max-height: 70px; 
 }
 
-  
-
 /* Estilo de la sección de inicio */
 .inicio {
   background-image: url('../assets/img/pexels-cottonbro-studio-5082579.jpg');
@@ -118,10 +114,10 @@ header img {
     z-index: 1;
 
     .info {
-      background-color: rgba(255, 255, 255, 0.8); // Fondo semitransparente para el texto
+      background-color: rgba(255, 255, 255, 0.8); 
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); // Sombra para resaltar el texto
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 
       h2 {
         color: #333;
@@ -149,12 +145,12 @@ header img {
     background-image: inherit;
     background-size: cover;
     background-position: center;
-    filter: blur(4px); // Efecto de desenfoque en la imagen de fondo
+    filter: blur(4px); 
     z-index: -1;
   }
 }
   .ult-ingresos {
-    margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+    margin-top: 100px; 
     text-align: center;
   }
 
@@ -173,11 +169,14 @@ header img {
   }
 
   #carouselExampleControls {
-    max-width: 600px; /* Ajusta el ancho según sea necesario */
+    max-width: 550px;
     margin: auto;
   }
 
-
+  #ult-ingresos .carousel-item img {
+    height: 300px; 
+    width: auto; 
+}
 
 /* Estilo del pie de página */
 footer {
@@ -235,10 +234,14 @@ footer iframe {
   }
   
   .tarjeta a {
-    color: $color-primary;
+    color: white;
     text-decoration: none;
     font-weight: bold;
   }
+
+  .tarjeta a:hover {
+    color: lightgray; /
+}
   
   // Estilos para la sección Nosotros
   .nosotros{
@@ -246,6 +249,15 @@ footer iframe {
     margin: auto;
     height: 100vh;
     padding: 100px 0px;
+}
+
+.tarjeta {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tarjeta:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .nosotros .fila{
@@ -307,6 +319,14 @@ footer iframe {
     color: $color-text-light;
   }
 
+  .opcion {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .opcion:hover {
+      transform: scale(1.1);
+  }
+
 
 /* Estilos para la sección de Contacto */
 main {
@@ -357,49 +377,111 @@ main {
     font-size: 16px;
   }
 
+  .fila-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    margin-top: 15px;
+}
+
+  .fila-datos .col {
+      display: flex;
+      align-items: center; 
+  }
+
+  
+  .fila-datos .col i {
+      margin-right: 10px; 
+  }
+
+  iframe {
+      border: 1px solid #ddd; 
+      border-radius: 8px; 
+      margin-top: 20px; 
+  }
+
   /* Estilos para el nav en dispositivos móviles */
+
+.menu-icon {
+  display: none;
+  color: white; 
+  font-size: 30px; 
+  cursor: pointer; 
+  text-align: right; 
+  padding: 10px; 
+}
+
+/* Estilos para el menú responsive */
 @media screen and (max-width: 767px) {
-    header {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px 0; 
-        
-        .logo-container,
-        .search-container,
-        .container-cart-icon {
-            margin-top: 10px; 
-        }
-    }
+  body.menu-open {
+    overflow: hidden; 
+  }
 
-    nav {
-        ul {
-            flex-direction: column; 
-            align-items: center; 
-            padding: 0;
-            
-            li {
-                margin: 10px 0; 
-            }
-        }
-    }
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position:absolute;
+    top: 0; 
+    left: 0;
+    background-color: #151623; 
+    width: 100%; 
+    z-index: 99; 
+    height: 100vh;
+  }
 
-    .container-cart-icon {
-        align-self: flex-end; 
+  header nav ul li {
+    margin-bottom: 10px; 
+    a {
+      font-size: 1.4em; 
     }
 }
 
+  header .menu-icon {
+    display: block; 
+  }
 
-.tarjeta {
-     width: 100%; 
+  nav ul.show {
+    display: flex;
+  }
+
+  .search-container {
+    display: none;
+  }
+
+  .nosotros .fila{
+    display: block;
+  }
+  .nosotros .fila .col{
+      width: 100%;
+  }
+  .nosotros .fila .col img{
+      max-width: 250px;   
+  }
+  .nosotros .fila .col .contenedor-titulo .info h2{
+      font-size: 2.0rem;
+  }
+
+  .container {
+    padding: 20px; 
+  }
+
+  .row {
+    flex-direction: column; 
+  }
+
+  .col-md-6 {
+    width: 100%; 
     margin-bottom: 20px; 
- }
+  }
 
+  iframe {
+    width: 90%; 
+    height: 180px; 
+  }
+  
+  .opcion {
+    margin: 0px;
+  }
 
-
-
-
-
-
-
-
-
+}

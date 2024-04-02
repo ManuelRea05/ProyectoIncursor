@@ -12,7 +12,10 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <span class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> 
+            </span>
+            <ul id="menuItems">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
@@ -76,17 +79,32 @@
 
     <footer>
         <div class="info">
-            <p>2023 - <span class="txtCeleste">INCURSOR </span> Todos los derechos reservados</p>
+            <p>2024 - <span class="txtCeleste">INCURSOR </span>© Todos los derechos reservados</p>
             <section>
                 <h3>Síguenos en nuestras redes sociales</h3>
                 <div class="social-links">
-                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <!-- Agrega más íconos de redes sociales si es necesario -->
+                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                        <i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/benja_informatica/" target="_blank">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
             </section>
         </div>
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var menuIcon = document.getElementById('menu-icon');
+          var menuItems = document.getElementById('menuItems');
+    
+          menuIcon.addEventListener('click', function() {
+            menuItems.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+          });
+        });
+      </script>
 </body>
 </html>

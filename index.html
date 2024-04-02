@@ -16,8 +16,11 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
+            <span class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> 
+            </span>
+            <ul id="menuItems">
+                <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./pages/productos.html">Productos</a></li>
                 <li><a href="./pages/nosotros.html">Nosotros</a></li>
                 <li><a href="./pages/armapc.html">Arma tu PC</a></li>
@@ -73,10 +76,7 @@
                             <img src="./assets/img/teclado.jpg" class="d-block img-fluid" alt="Producto 1">
                         </div>                        
                         <div class="carousel-item">
-                            <img src="./assets/img/teclado.jpg" class="d-block w-90 h-90 " alt="Producto 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/img/teclado.jpg" class="d-block w-100 h-100" alt="Producto 3">
+                            <img src="./assets/img/694452-MLA43229876708_082020-F.jpg" class="d-block img-fluid " alt="Producto 2">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -92,23 +92,36 @@
         </section>
     </main>
     
-
     <footer>
         <div class="info">
-            <p>2023 - <span class="txtCeleste">INCURSOR </span> Todos los derechos reservados</p>
+            <p>2024 - <span class="txtCeleste">INCURSOR </span>© Todos los derechos reservados</p>
             <section>
                 <h3>Síguenos en nuestras redes sociales</h3>
                 <div class="social-links">
-                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <!-- Agrega más íconos de redes sociales si es necesario -->
+                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                        <i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/benja_informatica/" target="_blank">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
             </section>
         </div>
     </footer>
-    
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var menuIcon = document.getElementById('menu-icon');
+          var menuItems = document.getElementById('menuItems');
+    
+          menuIcon.addEventListener('click', function() {
+            menuItems.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+          });
+        });
+      </script>
 </body>
 </html>

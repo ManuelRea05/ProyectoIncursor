@@ -13,7 +13,10 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <span class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i> 
+            </span>
+            <ul id="menuItems">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
@@ -61,61 +64,114 @@
                     <img class="imgTarjeta" src="../assets/img/mouse.jpg" alt="Producto 1">
                     <h3 class="mt-2 mb-2">Producto 1</h3>
                     <p>Descripción del producto 1.</p>
-                    <a href="#">Ver más</a>
+                    <a href="#" class="btn btn-primary" onclick="mostrarModal()">
+                        <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                    </a>
                 </div>
         
                 <div class="tarjeta border border-1 rounded-bottom col-md-4 shadow p-3">
                     <img class="imgTarjeta" src="../assets/img/teclado.jpg" alt="Producto 2">
                     <h3 class="mt-2 mb-2">Producto 2</h3>
                     <p>Descripción del producto 2.</p>
-                    <a href="#">Ver más</a>
+                    <a href="#" class="btn btn-primary" onclick="mostrarModal()"> 
+                        <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                    </a>
                 </div>
         
                 <div class="tarjeta border border-1 rounded-bottom col-md-4 shadow p-3">
-                    <img class="imgTarjeta" src="../assets/img/mouse.jpg" alt="Producto 3">
+                    <img class="imgTarjeta" src="../assets/img/694452-MLA43229876708_082020-F.jpg" alt="Producto 3">
                     <h3 class="mt-2 mb-2">Producto 3</h3>
                     <p>Descripción del producto 3.</p>
-                    <a href="#">Ver más</a>
+                    <a href="#" class="btn btn-primary" onclick="mostrarModal()">
+                        <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                    </a>
                 </div>
 
-                <div class="tarjeta border border-1 rounded-bottom  col-md-4 shadow p-3">
-                    <img class="imgTarjeta" src="../assets/img/teclado.jpg" alt="Producto 4">
-                    <h3 class="mt-2 mb-2">Producto 4</h3>
-                    <p>Descripción del producto 4.</p>
-                    <a href="#">Ver más</a>
-                </div>
-
-                <div class="tarjeta border border-1 rounded-bottom  col-md-4 shadow p-3">
-                    <img class="imgTarjeta" src="../assets/img/teclado.jpg" alt="Producto 4">
-                    <h3 class="mt-2 mb-2">Producto 5</h3>
-                    <p>Descripción del producto 5.</p>
-                    <a href="#">Ver más</a>
-                </div>
-
-                <div class="tarjeta border border-1 rounded-bottom  col-md-4 shadow p-3">
-                    <img class="imgTarjeta" src="../assets/img/teclado.jpg" alt="Producto 4">
-                    <h3 class="mt-2 mb-2">Producto 6</h3>
-                    <p>Descripción del producto 6.</p>
-                    <a href="#">Ver más</a>
-                </div>
+                <div class="w-90 mx-auto d-flex flex-wrap">
+                    <div class="tarjeta border border-1 rounded-bottom col-md-4 shadow p-3">
+                        <img class="imgTarjeta" src="../assets/img/mouse.jpg" alt="Producto 1">
+                        <h3 class="mt-2 mb-2">Producto 4</h3>
+                        <p>Descripción del producto 4.</p>
+                        <a href="#" class="btn btn-primary" onclick="mostrarModal()">
+                            <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                        </a>
+                    </div>
+            
+                    <div class="tarjeta border border-1 rounded-bottom col-md-4 shadow p-3">
+                        <img class="imgTarjeta" src="../assets/img/teclado.jpg" alt="Producto 2">
+                        <h3 class="mt-2 mb-2">Producto 5</h3>
+                        <p>Descripción del producto 5.</p>
+                        <a href="#" class="btn btn-primary" onclick="mostrarModal()">
+                            <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                        </a>
+                    </div>
+            
+                    <div class="tarjeta border border-1 rounded-bottom col-md-4 shadow p-3">
+                        <img class="imgTarjeta" src="../assets/img/694452-MLA43229876708_082020-F.jpg" alt="Producto 3">
+                        <h3 class="mt-2 mb-2">Producto 6</h3>
+                        <p>Descripción del producto 6.</p>
+                        <a href="#" class="btn btn-primary" onclick="mostrarModal()">
+                            <i class="fas fa-shopping-cart"></i> Añadir al carrito
+                        </a>
+                    </div>
             </div>
         </section>
+
+        <div class="modal fade" id="productoAgregadoModal" tabindex="-1" aria-labelledby="productoAgregadoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="productoAgregadoModalLabel">Producto añadido al carrito</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ¡El producto se ha añadido correctamente a tu carrito!
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         
     </main>
 
     <footer>
         <div class="info">
-            <p>2023 - <span class="txtCeleste">INCURSOR </span> Todos los derechos reservados</p>
+            <p>2024 - <span class="txtCeleste">INCURSOR </span>© Todos los derechos reservados</p>
             <section>
                 <h3>Síguenos en nuestras redes sociales</h3>
                 <div class="social-links">
-                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <!-- Agrega más íconos de redes sociales si es necesario -->
+                    <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                        <i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/benja_informatica/" target="_blank">
+                        <i class="fab fa-instagram"></i></a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
             </section>
         </div>
     </footer>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var menuIcon = document.getElementById('menu-icon');
+          var menuItems = document.getElementById('menuItems');
+    
+          menuIcon.addEventListener('click', function() {
+            menuItems.classList.toggle('show');
+            document.body.classList.toggle('menu-open');
+          });
+        });
+      </script>
+      <script>
+        function mostrarModal() {
+            var myModal = new bootstrap.Modal(document.getElementById('productoAgregadoModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+    </script>
 </body>
 </html>

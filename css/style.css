@@ -1,17 +1,460 @@
-/* Error: expected "{".
- *     ,
- * 243 |     color: lightgray; /
- *     |                        ^
- *     '
- *   scss\style.scss 243:24  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a     \2577 \a 243 \2502      color: lightgray; /\a     \2502                         ^\a     \2575 \a   scss\\style.scss 243:24  root stylesheet';
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
+
+.txtcolor {
+  color: #71cd38;
+}
+
+/* Estilo del encabezado */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container-left,
+header .container-right {
+  flex: 0 0 auto;
+}
+header .container-center {
+  flex: 1;
+  text-align: center;
+}
+header nav ul {
+  position: relative;
+  list-style: none;
+  display: block;
+  padding: 0;
+}
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: #abe18a;
+}
+header .search-container input[type=text],
+header .search-container button {
+  margin-right: 5px;
+  background-color: #fefefe;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+header .search-container button:hover {
+  background-color: #71cd38;
+}
+header .search-container button:focus {
+  outline: none;
+}
+header .container-cart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .container-cart-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  margin-right: 5px;
+}
+header .count-products {
+  font-size: 14px;
+  margin-right: 15px;
+}
+
+/* Estilo del logo en el encabezado */
+header img {
+  max-width: 100%;
+  height: auto;
+  max-height: 70px;
+}
+
+/* Estilo de la sección de inicio */
+.inicio {
+  background-image: url("../assets/img/pexels-cottonbro-studio-5082579.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+.inicio .contenido-seccion {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.inicio .contenido-seccion .info {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.inicio .contenido-seccion .info h2 {
+  color: #333;
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+.inicio .contenido-seccion .info p {
+  color: #666;
+  font-size: 16px;
+  margin: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.ult-ingresos {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.ult-ingresos p {
+  color: #71cd38;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 100px;
+}
+
+.inicio div:last-child {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#carouselExampleControls {
+  max-width: 550px;
+  margin: auto;
+}
+
+#ult-ingresos .carousel-item img {
+  height: 300px;
+  width: auto;
+}
+
+/* Estilo del pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+/* Estilo de la sección de contacto en el pie de página */
+footer section {
+  margin-bottom: 20px;
+}
+
+/* Estilo del mapa en el pie de página */
+footer iframe {
+  margin-top: 20px;
+  width: 30%;
+  max-width: 100%;
+  height: 200px;
+  border: 0;
+}
+
+/* Estilos para la sección de Productos y las tarjetas */
+.productos {
+  text-align: center;
+  padding: 20px;
+}
+
+.productos h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+  margin-bottom: 0rem;
+}
+
+.tarjeta {
+  margin: 10px;
+  flex: 1 0 200px;
+}
+
+.tarjeta .imgTarjeta {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.tarjeta a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tarjeta a:hover {
+  color: lightgray;
+}
+
+.nosotros {
+  max-width: 1100px;
+  margin: auto;
+  height: 100vh;
+  padding: 100px 0px;
+}
+
+.tarjeta {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tarjeta:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros .fila {
+  display: flex;
+  align-items: center;
+}
+
+.nosotros .fila .col {
+  width: 50%;
+}
+
+.nosotros .fila .col img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.nosotros .fila .col .contenedor-titulo {
+  display: flex;
+  align-items: center;
+}
+
+.nosotros .fila .col .contenedor-titulo .info {
+  color: #666;
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+.nosotros .fila .col .contenedor-titulo .info .frase {
+  color: #40F8FF;
+}
+
+.nosotros .fila .col .contenedor-titulo .info h2 {
+  color: #333;
+  font-size: 3rem;
+}
+
+.nosotros .fila .col p {
+  margin-bottom: 10px;
+  line-height: 28px;
+  margin-left: 30px;
+  color: #333;
+}
+
+.nosotros hr {
+  margin-bottom: 30px;
+}
+
+.opcion {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.opcion h3 {
+  margin-top: 10px;
+  color: #333;
+}
+
+.opcion p {
+  color: #666;
+}
+
+.opcion {
+  transition: transform 0.3s ease-in-out;
+}
+
+.opcion:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para la sección de Contacto */
+main {
+  padding: 20px;
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+form {
+  display: grid;
+  grid-gap: 15px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form button {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.fila-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.fila-datos .col {
+  display: flex;
+  align-items: center;
+}
+
+.fila-datos .col i {
+  margin-right: 10px;
+}
+
+iframe {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Estilos para el nav en dispositivos móviles */
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: right;
+  padding: 10px;
+}
+
+/* Estilos para el menú responsive */
+@media screen and (max-width: 767px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #151623;
+    width: 100%;
+    z-index: 99;
+    height: 100vh;
+  }
+  header nav ul li {
+    margin-bottom: 10px;
+  }
+  header nav ul li a {
+    font-size: 1.4em;
+  }
+  header .menu-icon {
+    display: block;
+  }
+  nav ul.show {
+    display: flex;
+  }
+  .search-container {
+    display: none;
+  }
+  .nosotros .fila {
+    display: block;
+  }
+  .nosotros .fila .col {
+    width: 100%;
+  }
+  .nosotros .fila .col img {
+    max-width: 250px;
+  }
+  .nosotros .fila .col .contenedor-titulo .info h2 {
+    font-size: 2rem;
+  }
+  .container {
+    padding: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  iframe {
+    width: 90%;
+    height: 180px;
+  }
+  .opcion {
+    margin: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

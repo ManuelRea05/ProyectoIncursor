@@ -1,0 +1,99 @@
+ <footer>
+        <div class="container">
+            <div class="footer-info">
+                <div class="logo">
+                    <img src="./assets/img/logo.png" alt="Logo" width="100">
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 - <span class="txtCeleste">INCURSOR </span> Todos los derechos reservados</p>
+                </div>
+            </div>
+            <div class="social-links">
+                <h4>Redes</h4>
+                <ul>
+                    <li>
+                        <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/benja_informatica/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="map">
+                <h4>Ubicación</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884.7495402780696!2d-58.958247119211315!3d-27.50043264631263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944573b5ace7f063%3A0x7e6cd9f9b3e65f4d!2sIncursor!5e0!3m2!1ses!2sar!4v1712076606272!5m2!1ses!2sar" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+
+ footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-info .logo {
+  margin-right: 20px;
+}
+
+.footer-info img {
+  width: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  flex: 0 1 calc(33.333% - 20px);
+  margin-bottom: 20px;
+}
+
+.container > div:last-child {
+  margin-right: 0; /* Eliminar el margen derecho del último elemento */
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links ul li a {
+  color: #fff;
+  font-size: 20px;
+}
+
+.social-links ul li a:hover {
+  color: #00bcd4;
+}
+
+.map iframe {
+  width: 60%;
+  height: 120px; 
+  border: none;
+  border-radius: 8px;
+}
